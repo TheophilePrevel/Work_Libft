@@ -1,9 +1,21 @@
-int	strncmp(const char *s1, const char *s2, size_t n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/09 10:16:12 by tprevel           #+#    #+#             */
+/*   Updated: 2019/10/09 10:18:57 by tprevel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int		strncmp(const char *s1, const char *s2, size_t n)
 {
 	int i;
 
 	i = 0;
 	while (s1[i] - s2[i] == 0 & i < n)
 		i++;
-	return (s1[i] - s2[i]); 
+	return (s1[i] - s2[i]);
 }

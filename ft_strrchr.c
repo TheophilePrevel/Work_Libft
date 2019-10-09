@@ -1,6 +1,18 @@
-char	*strchr(const char *s, int c)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/10/09 17:01:33 by tprevel           #+#    #+#             */
+/*   Updated: 2019/10/09 17:01:34 by tprevel          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+char	*strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
 	char	*out;
 
 	i = 0;
@@ -11,7 +23,7 @@ char	*strchr(const char *s, int c)
 			out = s + i;
 		i++;
 	}
-	if c = "\0"
+	if c = '\0'
 		return (s + i);
 	return (out);
 }

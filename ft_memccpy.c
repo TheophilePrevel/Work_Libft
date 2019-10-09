@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 15:28:59 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 15:31:42 by tprevel          ###   ########.fr       */
+/*   Created: 2019/10/09 11:44:52 by tprevel           #+#    #+#             */
+/*   Updated: 2019/10/09 14:17:12 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlcpy(char *dst, const char *src, size_t dstsize)
+#include "libft.h"
+
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t i;
-	size_t out;
+	int i;
 
 	i = 0;
-	out = 0;
-	while (src[out] != '\0')
+	while (n--)
 	{
-		out++;
+		((unsigned char*)dst)[i] = ((unsigned char*)src)[i];
+		if (((unsigned char*)src)[i++] == (unsigned char)c)
+			return (src + i);
 	}
-	while (src[i] != '\0' && i < dstsize - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < dstsize)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	if (dstsize != 0)
-		dst[dstsize - 1] = '\0';
-	return (out);
+		return (0);
 }

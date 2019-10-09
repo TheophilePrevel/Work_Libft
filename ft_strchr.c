@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tprevel <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 11:32:51 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/07 11:34:58 by tprevel          ###   ########.fr       */
+/*   Created: 2019/10/09 16:58:56 by tprevel           #+#    #+#             */
+/*   Updated: 2019/10/09 17:07:44 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*strchr(const char *s, int c)
 {
-	while *s
+	while (*s)
 	{
-		if *s == c
+		if (*s == (char)c)
 			return (s);
 		s++;
 	}
-	if c = "\0"
+	if (c == '\0')
 		return (s);
-	return (0);
+	return (NULL);
 }

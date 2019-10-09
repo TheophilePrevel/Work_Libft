@@ -1,37 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 15:28:59 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 15:31:42 by tprevel          ###   ########.fr       */
+/*   Created: 2019/10/09 11:10:42 by tprevel           #+#    #+#             */
+/*   Updated: 2019/10/09 14:51:47 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlcpy(char *dst, const char *src, size_t dstsize)
-{
-	size_t i;
-	size_t out;
+#include "libft.h"
 
-	i = 0;
-	out = 0;
-	while (src[out] != '\0')
-	{
-		out++;
-	}
-	while (src[i] != '\0' && i < dstsize - 1)
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	while (i < dstsize)
-	{
-		dst[i] = '\0';
-		i++;
-	}
-	if (dstsize != 0)
-		dst[dstsize - 1] = '\0';
-	return (out);
+void	ft_bzero(void *s, size_t n)
+{
+	ft_memset(s, 0, n);
 }
