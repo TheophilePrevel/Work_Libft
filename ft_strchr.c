@@ -6,7 +6,7 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:58:56 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 17:07:44 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/10/09 17:10:10 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@ char	*strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (char)c)
-			return (s);
+			return ((char *)s);
 		s++;
 	}
 	if (c == '\0')
-		return (s);
+		return ((char *)s);
 	return (NULL);
 }
