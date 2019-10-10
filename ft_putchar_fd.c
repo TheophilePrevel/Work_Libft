@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 14:05:56 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/10 13:18:38 by tprevel          ###   ########.fr       */
+/*   Created: 2019/10/10 14:29:00 by tprevel           #+#    #+#             */
+/*   Updated: 2019/10/10 14:37:09 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h.>
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char tmp[len];
-
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
-	return (dst);
+	write(fd, &c, 1);
 }

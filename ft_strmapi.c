@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 14:05:56 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/10 13:18:38 by tprevel          ###   ########.fr       */
+/*   Created: 2019/10/10 14:21:53 by tprevel           #+#    #+#             */
+/*   Updated: 2019/10/10 14:27:58 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned char tmp[len];
+	char	*out;
+	int		i;
 
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
-	return (dst);
+	i = 0;
+	if (!(out = malloc(sizeof(char) * (1 + ft_strlen(s)))))
+		return (NULL);
+	while (s[i])
+		out[i] = f(s[i]);
+	out[i] = '\0';
+	return (out);
 }

@@ -6,7 +6,7 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 11:44:52 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 14:17:12 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/10/10 10:52:11 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		if (((unsigned char*)src)[i++] == (unsigned char)c)
 			return (src + i);
 	}
-		return (0);
+	return (0);
 }

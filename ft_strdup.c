@@ -6,7 +6,7 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:17:45 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 15:36:23 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/10/10 10:55:08 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*strdup(const char *s1)
 	int i;
 
 	i = 0;
-	if(!(cpy = malloc(sizeof(char) * (ft_strlen(s1) + 1))))
+	if (!(cpy = malloc(sizeof(char) * (ft_strlen(s1) + 1))))
 		return (NULL);
-	while (src[i])
-		cpy[i] = src[i++];
+	while (s1[i])
+		cpy[i] = s1[i++];
 	cpy[i] = '\0';
 	return (cpy);
 }
