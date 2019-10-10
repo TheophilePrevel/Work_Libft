@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/10 14:34:11 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/10 15:44:00 by tprevel          ###   ########.fr       */
+/*   Created: 2019/10/10 16:13:34 by tprevel           #+#    #+#             */
+/*   Updated: 2019/10/10 17:09:18 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	int i;
+	t_list	*out;
 
-	i = 0;
-	while (s[i])
-		write(fd, &s[i++], 1);
+	if (!(out = malloc(sizeof(t_list)))
+			return (NULL);
+	out->content = content;
+	out->next = NULL;
+	return (out);
 }
