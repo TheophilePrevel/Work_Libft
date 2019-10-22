@@ -6,9 +6,11 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:58:56 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 17:10:10 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/10/22 18:22:57 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*strchr(const char *s, int c)
 {

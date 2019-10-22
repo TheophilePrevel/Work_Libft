@@ -6,13 +6,13 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:34:11 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/10 14:51:52 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/10/22 18:57:40 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	int i;
 
@@ -20,5 +20,4 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[i])
 		write(fd, &s[i++], 1);
 	write(fd, "\n", 1);
-	return (0);
 }

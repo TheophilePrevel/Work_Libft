@@ -6,9 +6,11 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:28:59 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 15:31:42 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/10/22 18:18:31 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {

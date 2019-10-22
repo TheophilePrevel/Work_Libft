@@ -6,13 +6,15 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 10:16:12 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 10:18:57 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/10/22 18:41:29 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	size_t i;
 
 	i = 0;
 	while (s1[i] - s2[i] == 0 & i < n)

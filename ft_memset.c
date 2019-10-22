@@ -6,9 +6,10 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 10:37:37 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 11:21:57 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/10/22 17:29:19 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
