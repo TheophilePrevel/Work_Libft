@@ -6,7 +6,7 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 11:05:08 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/22 18:56:15 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/11/04 20:02:35 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,9 @@
 static size_t	ft_lenword(const char *s, char c)
 {
 	size_t	len;
-	size_t	i;
 
 	len = 0;
-	i = 0;
-	while(s[i] && s[i] != c)
+	while(s[len] && s[len] != c)
 		len++;
 	return (len);
 }
@@ -54,7 +52,7 @@ char	**ft_split(char const *s, char c)
 	{
 		if (!(s[i] == c && (i == 0 || (s[i-1] == c))))
 		{
-			if (!(out[k++] == ft_substr(s + i, 0, ft_lenword(s+i, c))))
+			if (!(out[k++] == ft_substr(s + i, 0, ft_lenword(s + i, c))))
 			{
 				while (k >= 0)
 					free(out[k--]);

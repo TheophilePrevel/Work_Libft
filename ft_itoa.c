@@ -6,7 +6,7 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 12:04:51 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/10 14:06:01 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/11/04 19:46:35 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,15 @@ static int	ft_int_sizing(long n)
 
 char		*ft_itoa(int n)
 {
-	char *out;
-	long nbr;
-	int nbr_size;
-	int i;
-	int sign_factor;
+	char	*out;
+	long	nbr;
+	int		nbr_size;
+	int		i;
+	int		sign_factor;
 
 	i = 0;
+	if (n == -2147483648)
+		return ("-2147483648\0");
 	nbr = (n < 0) ? -n : n;
 	sign_factor = (n < 0) ? 1 : 0;
 	nbr_size = ft_int_sizing(nbr);

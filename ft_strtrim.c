@@ -6,7 +6,7 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 16:28:02 by tprevel           #+#    #+#             */
-/*   Updated: 2019/10/09 16:53:46 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/11/04 18:39:06 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 		start++;
 	while ((end - start) && ft_strchr(set, s1[end]))
 		end--;
-	return (ft_substr(s1, start, end - start));
+	return (ft_substr(s1, start, end - start + 1));
 }
