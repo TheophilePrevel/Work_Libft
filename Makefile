@@ -7,10 +7,6 @@ DFLAGS	= -MP -MMD -MF $(DEP_DIR)/$*.d -MT '$@'
 DEP_DIR	= dep
 OBJ_DIR	= obj
 DIR		= $(DEP_DIR) $(OBJ_DIR)
-# DIRECTORIES
-DEP_DIR	= dep
-OBJ_DIR	= obj
-DIR		= $(DEP_DIR) $(OBJ_DIR)
 
 # FILES
 NAME	= libft.a
