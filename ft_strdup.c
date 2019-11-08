@@ -6,13 +6,13 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 15:17:45 by tprevel           #+#    #+#             */
-/*   Updated: 2019/11/04 17:05:00 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/11/08 18:49:37 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*cpy;
 	int		i;

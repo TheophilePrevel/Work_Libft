@@ -6,13 +6,13 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:36:16 by tprevel           #+#    #+#             */
-/*   Updated: 2019/11/04 16:31:53 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/11/08 18:49:17 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void	*out;
 
