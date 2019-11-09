@@ -1,8 +1,3 @@
-# COMPILATION
-CC		= gcc
-CFLAGS	= -Wall -Wextra -Werror
-DFLAGS	= -MP -MMD -MF $(DEP_DIR)/$*.d -MT '$@'
-
 # DIRECTORIES
 DEP_DIR	= dep
 OBJ_DIR	= obj

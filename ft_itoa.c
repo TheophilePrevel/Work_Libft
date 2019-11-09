@@ -6,7 +6,7 @@
 /*   By: tprevel <tprevel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 12:04:51 by tprevel           #+#    #+#             */
-/*   Updated: 2019/11/04 19:46:35 by tprevel          ###   ########.fr       */
+/*   Updated: 2019/11/09 16:47:22 by tprevel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,8 @@ char		*ft_itoa(int n)
 	int		sign_factor;
 
 	i = 0;
-	if (n == -2147483648)
-		return ("-2147483648\0");
-	nbr = (n < 0) ? -n : n;
+	nbr = n;
+	nbr = (nbr < 0) ? -nbr : nbr;
 	sign_factor = (n < 0) ? 1 : 0;
 	nbr_size = ft_int_sizing(nbr);
 	if ((out = malloc(sizeof(char) * (nbr_size + 1 + sign_factor))) == NULL)
